@@ -9,14 +9,14 @@
 Подсказка: используйте операторы //, % и +
 """
 
-class_1 = input('\nВведите количество учеников в классе №1: ')
-class_2 = input('Введите количество учеников в классе №2: ')
-class_3 = input('Введите количество учеников в классе №3: ')
+class_1 = int(input('\nВведите количество учеников в классе №1: '))
+class_2 = int(input('Введите количество учеников в классе №2: '))
+class_3 = int(input('Введите количество учеников в классе №3: '))
 kol_user = 2 # количество учеников за партой.
 
-kol_desks_1 = (int(class_1) // kol_user) + (int(class_1) % kol_user) # количество парт в классе №1.
-kol_desks_2 = (int(class_2) // kol_user) + (int(class_2) % kol_user) # количество парт в классе №2.
-kol_desks_3 = (int(class_3) // kol_user) + (int(class_3) % kol_user) # количество парт в классе №3.
+kol_desks_1 = (class_1 // kol_user) + (class_1 % kol_user) # количество парт в классе №1.
+kol_desks_2 = (class_2 // kol_user) + (class_2 % kol_user) # количество парт в классе №2.
+kol_desks_3 = (class_3 // kol_user) + (class_3 % kol_user) # количество парт в классе №3.
 vsego = kol_desks_1 + kol_desks_2 + kol_desks_3
 
 print('\nОТВЕТ:',
