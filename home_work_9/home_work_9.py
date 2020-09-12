@@ -11,26 +11,45 @@
 print('Введите целое число:')
 
 number = int(input())
-count = 1
+
+if number != 0:
+    count = 1
+else:
+    count = 0
+
 summa = number
 max = number
 min = number
+odd = 0
+even = 0
+average = 0
+
+if number > 0:
+    if number % 2 != 0:
+        odd += 1
+    elif number % 2 == 0:
+        even += 1
 
 while number != 0:
     number = int(input())
     if number > 0:
         count += 1
         summa += number
-        if number > max:
+        if number >= max:
             max = number
-        if (number < max) and (number < min):
+        if (number < max) and (number <= min):
             min = number
-
+        if number % 2 != 0:
+            odd += 1
+        elif number % 2 == 0:
+            even += 1
     average = summa / count
 
-print ('ОТВЕТ:',
-       '\n\tКол. введённых чисел:\t', count,
-       '\n\tСумма введённых чисел:\t', summa,
+print('ОТВЕТ:',
+       '\n\tКол. введённых чисел:  \t', count,
+       '\n\tСумма введённых чисел: \t', summa,
        '\n\tСреднее арифметическое:\t', average,
-       '\n\tМаксимальное число:\t', max,
-       '\n\tМинимальное число:\t', min)
+       '\n\tМаксимальное число:    \t', max,
+       '\n\tМинимальное число:     \t', min,
+       '\n\tКол. чётных чисел:     \t', even,
+       '\n\tКол. не чётных чисел:  \t', odd)
