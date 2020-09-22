@@ -3,15 +3,19 @@
 строке `s` всех символов `ch`.
 Для решения НУЖНО использовать только функцию `find()`(rfind()), операторы `if` и `for`(while).
 """
-
 s = input('Введите строку: ')
 ch = input('Введите символ для поиска: ')
 
 print('ОТВЕТ:')
-idx = 0
-for i in range(len(s)):
-    idx = s.find(ch, i)
-    if s[i] == ch:
-        print('\tИндекс элемента: ', idx, '\tНомер эелемента в тексте: ', idx + 1)
-    if idx == -1:
-        break
+idx = s.find(ch)
+if idx != -1:
+    print('\tИндекс элемента: ', idx, '\tНомер эелемента в тексте: ', idx + 1)
+    for i in range(idx, len(s)):
+        idx = s.find(ch, idx+1)
+        if idx != -1:
+            print('\tИндекс элемента: ', idx, '\tНомер эелемента в тексте: ', idx + 1)
+        else:
+            break
+        i += 1
+else:
+    print('\tИскомый символ', ch, 'отсутствует в строке.')
