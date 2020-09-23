@@ -22,6 +22,7 @@ import random
 
 lst_1 = [random.randint(155, 200) for _ in range(10)]
 lst_1.sort(reverse=True)
+lst_2 = lst_1.copy()
 print('Рост учеников:', lst_1)
 rost = int(input('Введите рост ученика Пети: '))
 
@@ -36,8 +37,8 @@ else:
 
     # 2-й способ (for)
     position_2 = 0
-    for i in range(len(lst_1)):
-        if lst_1[i] >= rost:
+    for i in range(len(lst_2)):
+        if lst_2[i] >= rost:
             position_2 += 1
         i += 1
     print('\t2-й способ (for): Ученик Петя должен встать в строй под номером:', position_2 + 1)
