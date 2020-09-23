@@ -22,23 +22,30 @@ import random
 
 lst_1 = [random.randint(155, 200) for _ in range(10)]
 lst_1.sort(reverse=True)
-lst_2 = lst_1.copy()
-print('Рост учеников:', lst_1)
-rost = int(input('Введите рост ученика Пети: '))
 
+# 1-й способ (while)
+print('1-й способ (while): Рост учеников:', lst_1)
+rost = int(input('Введите рост ученика Пети: '))
 if rost > 200:
     print('ОШИБКА! Введен рост превышающий 200 см. Попробуйте заново :)')
 else:
-    # 1-й способ (while)
     position = 0
     while position < len(lst_1) and lst_1[position] >= rost:
         position += 1
     print('ОТВЕТ:\n\t1-й способ (while): Ученик Петя должен встать в строй под номером:', position + 1)
 
-    # 2-й способ (for)
+print()
+
+# 2-й способ (for)
+lst_2 = [random.randint(155, 200) for _ in range(10)]
+lst_2.sort(reverse=True)
+print('2-й способ (for): Рост учеников:', lst_2)
+if rost > 200:
+    print('ОШИБКА! Введен рост превышающий 200 см. Попробуйте заново :)')
+else:
     position_2 = 0
     for i in range(len(lst_2)):
         if lst_2[i] >= rost:
             position_2 += 1
         i += 1
-    print('\t2-й способ (for): Ученик Петя должен встать в строй под номером:', position_2 + 1)
+    print('ОТВЕТ:\n\t2-й способ (for): Ученик Петя должен встать в строй под номером:', position_2 + 1)
