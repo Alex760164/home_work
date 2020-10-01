@@ -7,13 +7,13 @@
 |        34587 | Learning Python, Mark Lutz         |        4 |          40.95 |
 |        98762 | Programming Python, Mark Lutz      |        5 |          56.80 |
 |        77226 | Head First Python, Paul Barry      |        3 |          32.95 |
-|        88112 | Einfuhrung in Python3, Bernd Klein |        3 |          24.99 |
+|        88112 | Introduction to Python3, Bernd Klein |        3 |          24.99 |
 +--------------+------------------------------------+----------+----------------+
 Напишите программу на Python, которая на вход получает список списков:
 [ [34587, 'Learning Python, Mark Lutz', 4, 40.95],
 [98762, 'Programming Python, Mark Lutz', 5, 56.80],
 [77226, 'Head First Python, Paul Barry', 3, 32.95],
-[88112, 'Einfuhrung in Python3, Bernd Klein', 3, 24.99] ]
+[88112, 'Introduction to Python3, Bernd Klein', 3, 24.99] ]
 и возвращает список кортежей. Каждый кортеж состоит из номера заказа и произведения цены на товары и
 количества. Стоимость товара должена быть увеличена на $10, если стоимость заказа меньше $100.
 Программа должна использовать lambda и map.
