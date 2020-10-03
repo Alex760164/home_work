@@ -21,6 +21,16 @@
 
 print('БУХГАЛТЕРСКАЯ КНИГА\n\tДобавление записи в книгу')
 
+"""
+ledger = [
+            [34587, 'Learning Python, Mark Lutz', 4, 40.95],
+            [98762, 'Programming Python, Mark Lutz', 5, 56.80],
+            [77226, 'Head First Python, Paul Barry', 3, 32.95],
+            [88112, 'Introduction to Python3, Bernd Klein', 3, 24.99],
+            [99999, 'Test test tes', 5, 11.11]
+        ]
+"""
+
 run_stop = 'y'
 ledger = []
 while run_stop != 'n':
@@ -36,4 +46,10 @@ while run_stop != 'n':
         break
     else:
         run_stop = input('\t\tХотите продолжить (y / n): ')
-print(ledger)
+
+print('\nОТВЕТ:\n\tВходной список:', ledger)
+
+list2 = list(zip(map(lambda x: x[0], ledger),
+                 map(lambda x: x[2] * x[3] if x[2] * x[3] >= 100 else x[2] * x[3] + 10, ledger)))
+
+print('\tВыходной список', list2)
