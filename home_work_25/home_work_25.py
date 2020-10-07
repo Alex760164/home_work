@@ -49,7 +49,8 @@ while run_stop != 'n':
 
 print('\nОТВЕТ:\n\tВходной список:', ledger)
 
-list2 = list(zip(map(lambda x: x[0], ledger),
-                 map(lambda x: x[2] * x[3] if x[2] * x[3] >= 100 else x[2] * x[3] + 10, ledger)))
+#list2 = list(zip(map(lambda x: x[0], ledger), map(lambda x: x[2] * x[3] if x[2] * x[3] >= 100 else x[2] * x[3] + 10, ledger)))
+
+list2 = list(map(lambda x: (x[0], round(x[2] * x[3], 2) if round(x[2] * x[3], 2) >= 100 else round(x[2] * x[3], 2) + 10), ledger))
 
 print('\tВыходной список', list2)
