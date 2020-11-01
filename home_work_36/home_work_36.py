@@ -24,7 +24,8 @@ class Group:
         self.list = []
 
     def add_record(self, name, age, grades):
-        self.list.append(Student(name, age, grades).information_of_student())
+        my_student = Student(name, age, grades).information_of_student()
+        self.list.append(my_student)
 
     def print_of_screen(self):
         print('\n'.join(item for item in self.list))
